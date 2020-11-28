@@ -178,20 +178,33 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/11/28/001-maven-dependencies-manage/" target="_self">
+          <img src="/img/post_img/post-001-images/banner.png" srcset="/img/loading.gif" alt="Maven 仓库管理方式">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/11/28/hello-world/">Hello World</a>
+        <a href="/2020/11/28/001-maven-dependencies-manage/">Maven 仓库管理方式</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/11/28/hello-world/">
+        <a href="/2020/11/28/001-maven-dependencies-manage/">
           
           
             
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+          Maven 使用仓库的几种方式Maven 项目使用的仓库一共有如下方式：
+
+本地仓库
+
+全局 profile 仓库，通过 settings.xml 中的 settings.repositories.repository 配置
+
+项目 profile 仓库，通过 pom.xml 中的 project.profiles.profile.repositories.repository 配置
+
+项目仓库，
         </a>
       </p>
 
@@ -199,7 +212,7 @@ Quick
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-11-28 15:13" pubdate>
+            <time datetime="2020-11-28 18:59" pubdate>
               2020-11-28
             </time>
           </div>
@@ -208,7 +221,7 @@ Quick
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+              <a href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">后端开发工具</a>
             
           </div>
         
@@ -216,11 +229,9 @@ Quick
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Hello-World/">Hello World</a>
+              <a href="/tags/Maven/">Maven</a>
             
-              <a href="/tags/Tag2/">Tag2</a>
-            
-              <a href="/tags/Tag3/">Tag3</a>
+              <a href="/tags/IDEA/">IDEA</a>
             
           </div>
         

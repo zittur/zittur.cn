@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="蹇之途">
   <meta name="keywords" content="">
-  <title>Hello World - Zittur&#39;s Blog</title>
+  <title>Maven 仓库管理方式 - Zittur&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -157,12 +157,12 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/post_img/post-001-images/banner.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="Maven 仓库管理方式">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-28 15:13" pubdate>
-        2020年11月28日 下午
+      <time datetime="2020-11-28 18:59" pubdate>
+        2020年11月28日 晚上
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      142 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -224,28 +224,31 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">Maven 仓库管理方式</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2020年11月28日 下午
+                  本文最后更新于：2020年11月28日 晚上
                 
               </p>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+              <h1 id="Maven-使用仓库的几种方式"><a href="#Maven-使用仓库的几种方式" class="headerlink" title="Maven 使用仓库的几种方式"></a>Maven 使用仓库的几种方式</h1><p>Maven 项目使用的仓库一共有如下方式：</p>
+<ul>
+<li><p>本地仓库</p>
+</li>
+<li><p>全局 profile 仓库，通过 settings.xml 中的 settings.repositories.repository 配置</p>
+</li>
+<li><p>项目 profile 仓库，通过 pom.xml 中的 project.profiles.profile.repositories.repository 配置</p>
+</li>
+<li><p>项目仓库，通过 pom.xml 中的 project.repositories.repository 配置</p>
+</li>
+<li><p>镜像仓库，通过 sttings.xml 中的 settings.mirrors.mirror 配置</p>
+</li>
+<li><p>中央仓库，这是默认的仓库</p>
+</li>
+</ul>
+<h1 id="Maven-仓库搜索顺序"><a href="#Maven-仓库搜索顺序" class="headerlink" title="Maven 仓库搜索顺序"></a>Maven 仓库搜索顺序</h1><p><strong>本地仓库 &gt; 全局 profile 仓库 &gt; 项目 profile 仓库 &gt; 项目仓库 &gt; 镜像仓库 &gt; 中央仓库</strong></p>
 
             </div>
             <hr>
@@ -255,7 +258,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+                      <a class="hover-with-bg" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">后端开发工具</a>
                     
                   </div>
                 
@@ -263,11 +266,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Hello-World/">Hello World</a>
+                      <a class="hover-with-bg" href="/tags/Maven/">Maven</a>
                     
-                      <a class="hover-with-bg" href="/tags/Tag2/">Tag2</a>
-                    
-                      <a class="hover-with-bg" href="/tags/Tag3/">Tag3</a>
+                      <a class="hover-with-bg" href="/tags/IDEA/">IDEA</a>
                     
                   </div>
                 
@@ -289,6 +290,38 @@
               
             </div>
 
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "rUM7VhogKSLwsxjksKDcCr3q-gzGzoHsz",
+          app_key: "bRwqNSDdYIlwFJTUjrsYqJQb",
+          placeholder: "想说点什么吗？快留下你的足迹!",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
             
           </article>
         </div>
